@@ -2,7 +2,9 @@ const router = require('express').Router();
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // The `/api/products` endpoint
-
+//---------------------------------------------------
+// dont touch PUT AND POST---------------------------
+//---------------------------------------------------
 // get all products
 router.get('/', (req, res) => {
   // find all products
@@ -47,7 +49,8 @@ router.post('/', (req, res) => {
     });
 });
 
-// update product
+
+// update product----------------------------------------------------------------
 router.put('/:id', (req, res) => {
   // update product data
   Product.update(req.body, {
