@@ -15,8 +15,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-  // find all categories
-  // be sure to include its associated Products
+ 
 // ======GET BY ID===================================================================================
 
   // find one category by its `id` value
@@ -57,7 +56,7 @@ router.get('/', async (req, res) => {
       });
   
       if (!categoriesData) {
-        res.status(404).json({ message: 'No location found with this id!' });
+        res.status(404).json({ message: 'No Category found with this id!' });
         return;
       }
   
